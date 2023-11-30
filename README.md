@@ -131,13 +131,16 @@ Please refer to the corresponding sections in the code for detailed implementati
 
 ### Analysis
 - The number of bikes rented is higher during the Summer and Autumn seasons, likely due to the warmer weather. This observation supports the strong correlation between temperature and bike rentals, as temperatures are generally warmer in summer. Additionally, the season with the lowest number of rented bikes is Winter, which can be attributed to colder weather conditions.
-![image](https://github.com/Kepler56/Seoul-Bike-Sharing-Demand/assets/98602898/eda1f589-898f-417e-8697-7f49ca15060c)
+![image](https://github.com/Kepler56/Seoul-Bike-Sharing-Demand/assets/98602898/867506b8-5165-4fc8-9434-5ad02bed4110)
+
 
 - The number of bikes rented is higher during non-holiday periods, indicating that people are more likely to utilize bikes for daily commuting rather than recreational purposes during holidays. This finding aligns with the assumption that individuals use bikes for transportation to work. 
-![image](https://github.com/Kepler56/Seoul-Bike-Sharing-Demand/assets/98602898/d04155d6-3dba-42bd-9747-de62b7f6bc14)
+![image](https://github.com/Kepler56/Seoul-Bike-Sharing-Demand/assets/98602898/74659272-65aa-486c-8ea5-c54757aa7a17)
+
 
 - During weekdays, there is a noticeable trend in bike rental times, with two prominent peaks occurring around 8 am and 6 pm. These peaks indicate that people are using bikes for their daily commute to work in the morning and returning home in the evening. Moreover, even though there is a lower number of rented bicycles during the weekend, there is still a gradual increase in rentals during the afternoons. 
-![image](https://github.com/Kepler56/Seoul-Bike-Sharing-Demand/assets/98602898/04a26b01-7482-45e7-ab2f-cf062eae9a9a)
+![image](https://github.com/Kepler56/Seoul-Bike-Sharing-Demand/assets/98602898/c2eb4fac-9924-4f1e-b059-89fd55a7fc24)
+
 
 ### Models
 
