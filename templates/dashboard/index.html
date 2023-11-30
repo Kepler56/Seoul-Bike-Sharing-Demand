@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Seoul Bike Sharing Dashboard</title>
+        <!--Bootstrap CDN link-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <!--Font awesome icon-->
+        <script src="https://kit.fontawesome.com/136cda2572.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <!-- Header -->
+        <header class="p-3 text-bg-dark">
+            <div class="container">
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="../" class="icon-nav d-flex align-items-center  mb-2 mb-lg-0 text-white text-decoration-none">
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-bicycle" viewBox="0 0 16 16">
+                        <path d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5m1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139zM8 9.057 9.598 6.5H6.402zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"/>
+                      </svg>
+                  
+                </a>
+        
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  <li><a href="../" class="nav-link px-2 text-secondary">Home</a></li>
+                  <li><a href="" class="nav-link px-2 text-white">Dashboard</a></li>
+                </ul>
+              </div>
+            </div>
+        </header>
+
+        <!-- Display the different images -->
+        <div class="container">
+          <!--Form components-->
+          <div class="row">
+              <div class="col-2"></div>
+              <div class="col-8">
+                  <h4 class="mb-3">Model Graphs</h4>
+                  <form class="needs-validation" action="" method="POST">
+                    <div class="row g-3">
+                  
+                      <!-- Different graphs -->
+                      <div class="col-md-12">
+                        <label for="graphs" class="form-label">Choose the graph you want to display</label>
+                        <select class="form-select" id="graphs" name="graphs" required>
+                          <option value="">Choose...</option>
+                          <option>Linear Regression</option>
+                          <option>Polynomial Regression</option>
+                          <option>Random Forest Regression</option>
+                          <option>Decision Tree Regression</option>
+                          <option>Gradient Descent Boosting</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please choose a graph.
+                        </div>
+                      </div>
+                    <hr class="my-4">
+                  </form>
+              </div>
+              <div class="col-2"></div>
+          </div>
+          <div class="row">
+            <div class="row">
+              <!-- Logistic Regression Graph -->
+              <div class="col-2"></div>
+              <div id="linearRegressionGraph" class="col-8 graph-container">
+                <img src="static/linear_regression.png" alt="Linear Regression Graph" width="650" height="350">
+              </div>
+              <div class="col-2"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-2"></div>
+              <!-- Polynomial Regression Graph -->
+              <div id="polynomialRegressionGraph" class="col-8 graph-container">
+                <img src="static/polynomial_regression.png" alt="Polynomial Regression Graph" width="650" height="350">
+              </div>
+              <div class="col-2"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-2"></div>
+              <!-- Random Forest Regression Graph -->
+              <div id="randomForestRegressionGraph" class="col-8 graph-container">
+                <img src="static/random_forest.png" alt="Random Forest Regression Graph" width="650" height="350">
+              </div>
+              <div class="col-2"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-2"></div>
+              <!-- Decision Tree Regression Graph -->
+              <div id="decisionTreeRegressionGraph" class="col-8 graph-container">
+                <img src="static/decision_tree.png" alt="Decision Tree Regression Graph" width="650" height="350">
+              </div>
+              <div class="col-2"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-2"></div>
+              <!-- Gradient Descent Graph -->
+              <div id="gradientDescentGraph" class="col-8 graph-container">
+                <img src="static/gradient_boosting.png" alt="Gradient Descent Boosting Graph" width="650" height="350">
+              </div>
+              <div class="col-2"></div>
+            </div>
+          </div>
+
+          <script>
+            // Get the drop-down element
+            var selectElement = document.getElementById("graphs");
+          
+            // Get the graph container elements
+            var linearRegressionGraph = document.getElementById("linearRegressionGraph");
+            var polynomialRegressionGraph = document.getElementById("polynomialRegressionGraph");
+            var randomForestRegressionGraph = document.getElementById("randomForestRegressionGraph");
+            var decisionTreeRegressionGraph = document.getElementById("decisionTreeRegressionGraph");
+            var gradientDescentGraph = document.getElementById("gradientDescentGraph");
+
+            linearRegressionGraph.style.display = "none";
+            polynomialRegressionGraph.style.display = "none";
+            randomForestRegressionGraph.style.display = "none";
+            decisionTreeRegressionGraph.style.display = "none";
+            gradientDescentGraph.style.display = "none";
+          
+            // Add an event listener to the drop-down
+            selectElement.addEventListener("change", function () {
+              // Hide all graph containers by default
+              linearRegressionGraph.style.display = "none";
+              polynomialRegressionGraph.style.display = "none";
+              randomForestRegressionGraph.style.display = "none";
+              decisionTreeRegressionGraph.style.display = "none";
+              gradientDescentGraph.style.display = "none";
+          
+              // Get the selected option
+              var selectedOption = selectElement.value;
+          
+              // Show the corresponding graph container based on the selected option
+              if (selectedOption === "Linear Regression") {
+                linearRegressionGraph.style.display = "block";
+              } else if (selectedOption === "Polynomial Regression") {
+                polynomialRegressionGraph.style.display = "block";
+              } else if (selectedOption === "Random Forest Regression") {
+                randomForestRegressionGraph.style.display = "block";
+              }
+               else if (selectedOption === "Decision Tree Regression") {
+                decisionTreeRegressionGraph.style.display = "block";
+              }
+              else if (selectedOption === "Gradient Descent Boosting") {
+                gradientDescentGraph.style.display = "block";
+              }
+            });
+          </script>
+      </div>
+    </body>
+</html>

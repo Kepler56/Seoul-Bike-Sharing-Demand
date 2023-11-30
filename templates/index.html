@@ -12,10 +12,28 @@
   </head>
   <body>
     <!--Header-->
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="" class="icon-nav d-flex align-items-center  mb-2 mb-lg-0 text-white text-decoration-none">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-bicycle" viewBox="0 0 16 16">
+                    <path d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5m1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139zM8 9.057 9.598 6.5H6.402zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"/>
+                  </svg>
+              
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="" class="nav-link px-2 text-white">Home</a></li>
+              <li><a href="dashboard" class="nav-link px-2 text-secondary">Dashboard</a></li>
+            </ul>
+          </div>
+        </div>
+    </header>
+
     <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="/templates/image/bicycle_image.png" alt="" width="72" height="57">
         <h2>Bike Sharing Prediction</h2>
-        <p class="lead">Below is the simulation of the Polynomial regression model using the Flask API for predicting the number of bikes rented per hour 
+        <p class="lead">Below is the simulation of the Random Forest regression model using the Flask API for predicting the number of bikes rented per hour 
             in Seoul based on the different values that the user will have to fill in. 
         </p>
     </div>
@@ -26,7 +44,7 @@
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8">
-                <h4 class="mb-3">Polynomail Regression Model</h4>
+                <h4 class="mb-3">Random Forest Regression Model</h4>
                 <form class="needs-validation" action="{{url_for('predict')}}" method="POST">
                   <div class="row g-3">
                     <!-- Date -->

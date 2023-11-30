@@ -12,6 +12,10 @@ model = pickle.load(open('./model/seoul_bike_sharing_model.pkl', 'rb'))
 def Home():
     return render_template('index.html')
 
+@app.route("/dashboard", methods=['GET'])
+def dashboard():
+    return render_template('dashboard/index.html')
+
 @app.route('/predict',methods=['POST'])
 def predict():
     if request.method == 'POST':
